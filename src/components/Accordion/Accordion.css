@@ -1,0 +1,122 @@
+.accordion-wrapper {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background1);
+}
+
+.accordion-wrapper h2 {
+  font-weight: bold;
+  font-size: 60px;
+  padding-bottom: 20px;
+  color: rgb(18, 35, 60);
+}
+
+.accordion-container {
+  width: 100%;
+  margin: 10vh 0;
+  height: 70vh;
+  display: flex;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-container::-webkit-scrollbar {
+  display: none;
+}
+
+.accordion-left {
+  width: 100%;
+  background-color: var(--background2);
+}
+
+.accordion-info {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  top: 40vh;
+  transform: translateY(-50%);
+  background-color: var(--background);
+}
+
+.accordion-feature {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  align-items: center;
+  height: 40vh;
+  justify-content: center;
+  gap: 30px;
+}
+.accordion-feature h3 {
+  width: 120px;
+}
+.accordion-feature h3.active {
+  color: blue;
+  font-size: 23px;
+}
+
+.accordion-desc {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-right {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 80vh;
+  padding-top: 30vh;
+  object-fit: cover;
+  object-position: left top;
+  scroll-snap-align: start;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 992px) {
+  .accordion-container {
+    flex-direction: row;
+    height: 60vh;
+  }
+
+  .slide {
+    padding: 0;
+    height: 100%;
+  }
+  .accordion-left {
+    width: 50%;
+    height: 100%;
+  }
+  .accordion-right {
+    width: 50%;
+    height: 100%;
+  }
+  .accordion-info {
+    width: 45%;
+    height: 60vh;
+    gap: 2rem;
+    top: 55vh;
+    padding: 0;
+  }
+  .accordion-feature {
+    height: 60vh;
+  }
+  .accordion-wrapper {
+    padding: 0 4vw;
+  }
+}

@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Accordion from "./components/Accordion/Accordion";
+import Data from "./components/DataAnalysis/Data";
+import Navbar from "./components/NavBar/NavBar";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+  const changeTheme = () => {
+    theme === "dark" ? setTheme("light") : setTheme("dark");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-theme={theme} className="App">
+      <Navbar changeTheme={changeTheme} currentTheme={theme} />
+      <Data />
+      <Accordion />
     </div>
   );
 }
