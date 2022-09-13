@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Accordion from "./components/Accordion/Accordion";
+import Carousel from "./components/Carosel/Carousel";
 import Data from "./components/DataAnalysis/Data";
 import Navbar from "./components/NavBar/NavBar";
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar changeTheme={changeTheme} currentTheme={theme} />
       <Data />
       <Accordion />
+      <Carousel />
     </div>
   );
 }

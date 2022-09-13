@@ -45,8 +45,6 @@ function Accordion() {
     };
   }, []);
 
-  console.log(index);
-
   return (
     <div className="accordion-wrapper">
       <h2>MENA Cart</h2>
