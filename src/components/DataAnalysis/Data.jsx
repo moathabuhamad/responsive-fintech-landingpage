@@ -7,6 +7,7 @@ import { RadarChart } from "./Charts/RadarChart";
 import { VerticalChart } from "./Charts/VerticalChart";
 import { useEffect, useState } from "react";
 import { PolarAreaChart } from "./Charts/PolarAreaChart";
+import { GroupedBar } from "./Charts/GroupedBar";
 
 function Data() {
   const [factor, setFactor] = useState(1);
@@ -82,7 +83,9 @@ function Data() {
           <Fade right>
             <div className="report">
               <div className="chart__area__small">
-                <RadarChart />
+                <h3>Sales 170,270</h3>
+                <h3>Food Expences 220,270</h3>
+                <h3>Net -50,000</h3>
               </div>
             </div>
           </Fade>
@@ -90,7 +93,7 @@ function Data() {
         <div className="data-monthly">
           <Fade right>
             <div className="monthly">
-              <VerticalChart />
+              <RadarChart />
             </div>
           </Fade>
           <Fade right>

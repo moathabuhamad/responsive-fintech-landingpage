@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -20,44 +20,110 @@ ChartJS.register(
   Legend,
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      display: false,
-      position: "top",
-    },
-    title: {
-      display: true,
-      text: "Monthly Revenue",
-      position: "bottom",
-    },
-  },
-  maintainAspectRatio: false,
-  scales: {
-    y: { display: false },
-    x: { display: false },
-  },
-};
-
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
-
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-    {
-      label: "Dataset 2",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: "rgba(53, 162, 235, 0.5)",
-    },
-  ],
-};
-
 export function VerticalChart() {
+  const [col, setcol] = useState(false);
+  useEffect(() => {
+    setcol(
+      getComputedStyle(document.documentElement).getPropertyValue(
+        "--bacground",
+      ),
+    );
+  }, [col]);
+
+  const data = {
+    labels: ["Week I", "Week II", "Week III", "Week IV"],
+    datasets: [
+      {
+        label: "Pending Approval",
+        backgroundColor: "rgb(51, 153, 255)",
+        data: [20, 10, 30, 15],
+        stack: 1,
+        name: "AMR",
+      },
+      {
+        label: "Invoice Created",
+        backgroundColor: "rgb(51, 204, 51)",
+        data: [60, 20, 20, 30],
+        stack: 1,
+      },
+      {
+        label: "Approved!",
+        backgroundColor: "green",
+        data: [40, 50, 20, 45],
+        stack: 1,
+      },
+      {
+        label: "Pending Approval",
+        backgroundColor: "rgb(51, 153, 255)",
+        data: [25, 5, 20, 10],
+        stack: 2,
+      },
+      {
+        label: "Invoice Created!",
+        backgroundColor: "rgb(51, 204, 51)",
+        data: [51, 25, 10, 30],
+        stack: 2,
+      },
+      {
+        label: "Approved!",
+        backgroundColor: "green",
+        data: [45, 40, 22, 55],
+        stack: 2,
+      },
+      {
+        label: "Pending Approval",
+        backgroundColor: "rgb(51, 153, 255)",
+        data: [35, 5, 25, 10],
+        stack: 3,
+      },
+      {
+        label: "Invoice Created!",
+        backgroundColor: "rgb(51, 204, 51)",
+        data: [51, 25, 10, 30],
+        stack: 3,
+      },
+      {
+        label: "Approved!",
+        backgroundColor: "green",
+        data: [45, 40, 22, 55],
+        stack: 3,
+      },
+    ],
+  };
+
+  const options = {
+    indexAxis: "x",
+    elements: {
+      bar: {
+        borderRadius: 20,
+        pointStyle: "circle",
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: col,
+        },
+      },
+      y: {
+        ticks: {
+          color: col,
+        },
+      },
+    },
+    maintainAspectRatio: false,
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+        position: "right",
+      },
+      title: {
+        display: false,
+        text: "Duration Payments",
+      },
+    },
+  };
+
   return <Bar options={options} data={data} />;
 }

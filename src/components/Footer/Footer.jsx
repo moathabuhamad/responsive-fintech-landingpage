@@ -19,7 +19,12 @@ function Footer() {
 
   return (
     <div className="footer-wrapper">
-      <ToastContainer />
+      <ToastContainer
+        toastStyle={{
+          backgroundColor: "var(--accent-color1)",
+          color: "var(--background)",
+        }}
+      />
 
       <div className="footer-container">
         <div className="footer-left">

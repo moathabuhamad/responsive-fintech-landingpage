@@ -7,7 +7,6 @@ ChartJS.register(ArcElement, Tooltip);
 export function DoughnutChart() {
   const [col, setcol] = useState(false);
   useEffect(() => {
-    console.log(col);
     setcol(
       getComputedStyle(document.documentElement).getPropertyValue(
         "--bacground",

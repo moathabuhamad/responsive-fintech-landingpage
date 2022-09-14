@@ -9,7 +9,6 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { faker } from "@faker-js/faker";
 
 ChartJS.register(
   CategoryScale,
@@ -39,14 +38,12 @@ const total = (sales, time) => {
   for (let i = 0; i < time; i++) {
     sum = sum + sales[i];
   }
-  console.log(sum);
   return sum;
 };
 
 export function BarChart(props) {
   const [col, setcol] = useState(false);
   useEffect(() => {
-    console.log(col);
     setcol(
       getComputedStyle(document.documentElement).getPropertyValue(
         "--bacground",
@@ -63,15 +60,23 @@ export function BarChart(props) {
           total(onlineSales, props.factor),
           total(storeSales, props.factor),
         ],
-        backgroundColor: ["rgba(0, 13, 194, 0.722)"],
+        backgroundColor: ["rgba(6, 0, 194, 0.722)"],
       },
       {
         label: "Cost",
         data: [
           total(onlineSales, props.factor) * 0.136,
-          total(storeSales, props.factor) * 0.176,
+          total(storeSales, props.factor) * 0.376,
         ],
-        backgroundColor: ["rgba(41, 170, 255, 0.611)"],
+        backgroundColor: ["rgba(98, 41, 255, 0.611)"],
+      },
+      {
+        label: "Net Profit",
+        data: [
+          total(onlineSales, props.factor) * 0.864,
+          total(storeSales, props.factor) * 0.624,
+        ],
+        backgroundColor: ["rgba(41, 255, 209, 0.611)"],
       },
     ],
   };
@@ -109,5 +114,6 @@ export function BarChart(props) {
       },
     },
   };
+
   return <Bar options={options} data={data} />;
 }

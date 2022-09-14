@@ -72,9 +72,17 @@ input[type="radio"]:checked + .radioLable {
 .chart__area__small {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   background-color: var(--background3);
   padding: 10px;
   border-radius: 5px;
+}
+
+.chart__area__small h3,
+h4 {
+  color: var(--accent-color1);
 }
 
 .data-right {
@@ -99,6 +107,7 @@ input[type="radio"]:checked + .radioLable {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   background-color: var(--background2);

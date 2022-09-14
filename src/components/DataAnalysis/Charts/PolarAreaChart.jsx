@@ -13,7 +13,6 @@ ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 export function PolarAreaChart() {
   const [col, setcol] = useState(false);
   useEffect(() => {
-    console.log(col);
     setcol(
       getComputedStyle(document.documentElement).getPropertyValue(
         "--bacground",
@@ -28,12 +27,19 @@ export function PolarAreaChart() {
         label: "# of Votes",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
-          "rgba(255, 99, 132, 0.5)",
-          "rgba(54, 162, 235, 0.5)",
-          "rgba(255, 206, 86, 0.5)",
-          "rgba(75, 192, 192, 0.5)",
-          "rgba(153, 102, 255, 0.5)",
-          "rgba(255, 159, 64, 0.5)",
+          "rgba(0, 15, 224, 0.766)",
+          "rgba(41, 170, 255, 0.611)",
+          "rgba(72, 105, 255, 0.611)",
+          "rgba(0, 13, 194, 0.766)",
+          "rgba(41, 170, 255, 0.611)",
+          "rgba(0, 13, 194, 0.766)",
+        ],
+        borderColor: [
+          "rgba(0, 13, 194, 0.522)",
+          "rgba(15, 13, 194, 0.522)",
+          "rgba(30, 13, 194, 0.522)",
+          "rgba(45, 13, 194, 0.522)",
+          "rgba(60, 13, 194, 0.522)",
         ],
         borderWidth: 1,
       },
