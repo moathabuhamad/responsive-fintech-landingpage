@@ -2,6 +2,7 @@ import { useState } from "react";
 import Accordion from "./components/Accordion/Accordion";
 import Carousel from "./components/Carosel/Carousel";
 import Data from "./components/DataAnalysis/Data";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/NavBar/NavBar";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Data />
       <Accordion />
       <Carousel />
+      <Footer />
     </div>
   );
 }

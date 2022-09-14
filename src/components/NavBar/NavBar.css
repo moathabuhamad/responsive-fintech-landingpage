@@ -6,28 +6,28 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  z-index: 40;
-  background-color: var(--background);
+  z-index: 500;
+  background-color: var(--background2);
 }
 
-nav .brand-container .brand img {
+nav .brand img {
   height: 40px;
 }
-nav .brand-container .toggle-container {
+nav .toggle-container {
   display: none;
 }
-nav .links-container .links {
+nav .links {
   list-style-type: none;
   display: flex;
   gap: 4rem;
 }
-nav .links-container .links li .dark {
+nav .links li .dark {
   color: black;
 }
-nav .links-container .links li .light {
-  color: yellow;
+nav .links li .light {
+  color: white;
 }
-nav .links-container .links li a {
+nav .links li a {
   color: var(--accent-color3);
   text-decoration: none;
 }
@@ -57,15 +57,15 @@ nav .links-container .links li a {
     display: flex;
     flex-direction: row-reverse;
     gap: 1rem;
-    z-index: 40;
+    z-index: 999;
   }
   nav .brand-container .toggle-container .toggle {
-    z-index: 40;
+    z-index: 999;
     display: block;
   }
   nav .links-container {
-    z-index: 30;
-    background-image: linear-gradient(101deg, var(--pink), var(--orange));
+    z-index: 999;
+    background-color: #01002e;
     height: 100vh;
     position: absolute;
     top: 0;

@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import Fade from "react-reveal/Fade";
 
 import "./Carousel.css";
 
@@ -8,8 +9,10 @@ import { Autoplay } from "swiper";
 
 function Carousel() {
   return (
-    <div className="swiper-container">
-      <h2>Our Partners</h2>
+    <div className="swiper__container" name="partners">
+      <Fade bottom>
+        <h2>Our Partners</h2>
+      </Fade>
       <Swiper
         slidesPerView={1}
         breakpoints={{

@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 :root {
-  --orange: #ff8139;
-  --pink: #ff3998;
-  --green: #39ffa0;
-  --red: #ff3939;
-  --light-green: #edfff6;
-  --light-orange: #fff0e8;
-  --accent-color1: #fff;
-  --accent-color2: #555;
-  --accent-color3: #ccc;
+  --accent-color1: var(--bluegrey-100);
+  --accent-color2: var(--bluegrey-200);
   --card-color: rgb(59, 59, 59);
   --background: var(--bluegrey-900);
   --background2: var(--bluegrey-800);
-  --card1: var(--bluegrey-700);
+  --background3: var(--bluegrey-700);
   --bluegrey-50: #f0f4f8;
   --bluegrey-100: #d9e2ec;
   --bluegrey-200: #bcccdc;
@@ -26,13 +19,12 @@
   --font-family: "Lato", sans-serif;
 }
 [data-theme="light"] {
-  --background: #f8f9fd;
+  --background: var(--bluegrey-100);
   --background2: var(--bluegrey-50);
+  --background3: white;
   --card1: var(--bluegrey-100);
-  --accent-color1: #000;
-  --accent-color2: #eee;
-  --accent-color3: #777;
-  --card-color: #eee;
+  --accent-color1: var(--bluegrey-900);
+  --accent-color2: var(--bluegrey-800);
 }
 
 Html,
@@ -74,9 +66,10 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background-color: #111;
-  width: 0.2rem;
+  background-color: #93b9dc;
+  width: 0.3rem;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--orange);
+  background-color: blue;
+  border-radius: 100px;
 }

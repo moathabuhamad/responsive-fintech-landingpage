@@ -1,4 +1,4 @@
-.swiper-container {
+.swiper__container {
   height: 60vh;
   width: 100vw;
   display: flex;
@@ -9,10 +9,10 @@
   gap: 100px;
 }
 
-.swiper-container h2 {
+.swiper__container h2 {
   font-weight: bold;
   font-size: 60px;
-  color: rgb(18, 35, 60);
+  color: var(--accent-color1);
 }
 
 .partner {
