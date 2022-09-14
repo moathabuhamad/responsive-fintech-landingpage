@@ -5,8 +5,12 @@ import { DoughnutChart } from "./Charts/DoughnutChart";
 import { PieChart } from "./Charts/PieChart";
 import { RadarChart } from "./Charts/RadarChart";
 import { VerticalChart } from "./Charts/VerticalChart";
+import { useEffect, useState } from "react";
+import { PolarAreaChart } from "./Charts/PolarAreaChart";
 
 function Data() {
+  const [factor, setFactor] = useState(1);
+
   return (
     <div className="data-container" name="hero">
       <Fade left>
@@ -19,6 +23,7 @@ function Data() {
               name="radio"
               value={1}
               className="radio"
+              onClick={() => setFactor(1)}
             />
             <label htmlFor={`1`} className={"radioLable"}>
               Last 24 Hours
@@ -29,6 +34,7 @@ function Data() {
               name="radio"
               value={2}
               className="radio"
+              onClick={() => setFactor(7)}
             />
             <label htmlFor={`2`} className={"radioLable"}>
               Last 7 Days
@@ -39,13 +45,14 @@ function Data() {
               name="radio"
               value={3}
               className="radio"
+              onClick={() => setFactor(30)}
             />
             <label htmlFor={`3`} className={"radioLable"}>
               Last 30 Days
             </label>
           </div>
           <div className="chart__area">
-            <BarChart />
+            <BarChart factor={factor} />
           </div>
         </div>
       </Fade>
@@ -68,7 +75,7 @@ function Data() {
           <Fade right>
             <div className="report">
               <div className="chart__area__small">
-                <RadarChart />
+                <PolarAreaChart />
               </div>
             </div>
           </Fade>

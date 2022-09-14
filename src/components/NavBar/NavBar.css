@@ -21,15 +21,14 @@ nav .links {
   display: flex;
   gap: 4rem;
 }
-nav .links li .dark {
-  color: black;
+nav .links li {
+  color: var(--accent-color1);
 }
-nav .links li .light {
-  color: white;
-}
+
 nav .links li a {
   color: var(--accent-color3);
   text-decoration: none;
+  cursor: pointer;
 }
 
 [data-theme="dark"] nav .brand-container .brand img {
@@ -64,8 +63,8 @@ nav .links li a {
     display: block;
   }
   nav .links-container {
-    z-index: 999;
-    background-color: #01002e;
+    z-index: -1;
+    background-color: var(--background3);
     height: 100vh;
     position: absolute;
     top: 0;
@@ -81,9 +80,7 @@ nav .links li a {
   nav .links-container .links {
     flex-direction: column;
   }
-  nav .links-container .links li a {
-    color: var(--background);
-  }
+
   nav .links-container .links li:last-of-type {
     display: none;
   }

@@ -5,7 +5,7 @@
   --card-color: rgb(59, 59, 59);
   --background: var(--bluegrey-900);
   --background2: var(--bluegrey-800);
-  --background3: var(--bluegrey-700);
+  --background3: var(--bluegrey-600);
   --bluegrey-50: #f0f4f8;
   --bluegrey-100: #d9e2ec;
   --bluegrey-200: #bcccdc;
@@ -43,10 +43,6 @@ body {
   box-sizing: border-box;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
-
 .App {
   background-color: var(--background);
   font-family: var(--font-family);
@@ -66,10 +62,10 @@ body {
 }
 
 ::-webkit-scrollbar {
-  background-color: #93b9dc;
-  width: 0.3rem;
+  background-color: var(--accent-color2);
+  width: 0.4rem;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background-color: var(--background3);
   border-radius: 100px;
 }

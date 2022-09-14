@@ -42,7 +42,7 @@ export default function Navbar({ changeTheme, currentTheme }) {
               </Link>
             </li>
             <li>
-              <Link to="mena" smooth={true} duration={500}>
+              <Link to="mena" smooth={true} duration={500} offset={-100}>
                 MENA Cart
               </Link>
             </li>

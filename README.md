@@ -1,3 +1,7 @@
 # FinTech App Landing Page
 
-## Initial Setup
+## Installation
+
+- Clone Repo
+- npm install , yarn
+- npm start , yarn start

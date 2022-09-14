@@ -55,7 +55,7 @@ function Footer() {
         <div className="footer-right">
           <div className="footer-contact-item">Contact</div>
           <div className="footer-contact-item">
-            <FaMapMarkerAlt style={{ marginRight: "10px" }} /> Ammn , Jordan
+            <FaMapMarkerAlt style={{ marginRight: "10px" }} /> Amman , Jordan
           </div>
           <div className="footer-contact-item">
             <FaPhone style={{ marginRight: "10px" }} /> +1 234 56 78
