@@ -57,6 +57,7 @@ function Accordion() {
       <div className="accordion-container" ref={accordionRef}>
         <div className="accordion-left">
           <div className="accordion-info">
+            <Fade left>
               <div className="accordion-feature">
                 {features.map((f) => (
                   <h3
@@ -72,15 +73,14 @@ function Accordion() {
               <div className="accordion-desc">
                 <p>{features[index].text}</p>
               </div>
+            </Fade>
           </div>
         </div>
-        <Fade right>
           <div className="accordion-right">
             <img className="slide" src={slide1} alt="slide1" />
             <img className="slide" src={slide2} alt="slide2" />
             <img className="slide" src={slide3} alt="slide3" />
           </div>
-        </Fade>
       </div>
     </div>
   );
